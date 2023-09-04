@@ -1,0 +1,423 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{AF4FB4FB-91D7-4F3E-A2A4-7AF3C018302B}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>DessertKoma_Employees</RootNamespace>
+    <AssemblyName>DessertKoma_Employees</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Guna.UI2, Version=2.0.4.2, Culture=neutral, PublicKeyToken=8b9d14aa5142e261, processorArchitecture=MSIL">
+      <HintPath>..\packages\Guna.UI2.WinForms.2.0.4.2\lib\net461\Guna.UI2.dll</HintPath>
+    </Reference>
+    <Reference Include="LiveCharts, Version=0.9.7.0, Culture=neutral, PublicKeyToken=0bc1f845d1ebb8df, processorArchitecture=MSIL">
+      <HintPath>..\packages\LiveCharts.0.9.7\lib\net45\LiveCharts.dll</HintPath>
+    </Reference>
+    <Reference Include="LiveCharts.WinForms, Version=0.9.7.1, Culture=neutral, PublicKeyToken=0bc1f845d1ebb8df, processorArchitecture=MSIL">
+      <HintPath>..\packages\LiveCharts.WinForms.0.9.7.1\lib\net45\LiveCharts.WinForms.dll</HintPath>
+    </Reference>
+    <Reference Include="LiveCharts.Wpf, Version=0.9.7.0, Culture=neutral, PublicKeyToken=0bc1f845d1ebb8df, processorArchitecture=MSIL">
+      <HintPath>..\packages\LiveCharts.Wpf.0.9.7\lib\net45\LiveCharts.Wpf.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Office.Interop.Word, Version=15.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Office.Interop.Word.15.0.4797.1004\lib\net20\Microsoft.Office.Interop.Word.dll</HintPath>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="PresentationCore" />
+    <Reference Include="PresentationFramework" />
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Design" />
+    <Reference Include="System.Management" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Windows.Forms.DataVisualization" />
+    <Reference Include="System.Xaml" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="WindowsBase" />
+    <Reference Include="WindowsFormsIntegration" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Classes\Image.cs" />
+    <Compile Include="Controls\AddIngredientControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\AddIngredientControl.Designer.cs">
+      <DependentUpon>AddIngredientControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\AddIngredientInDessertControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\AddIngredientInDessertControl.Designer.cs">
+      <DependentUpon>AddIngredientInDessertControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\AddIngredientInNewDessertControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\AddIngredientInNewDessertControl.Designer.cs">
+      <DependentUpon>AddIngredientInNewDessertControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\AddNewDessertControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\AddNewDessertControl.Designer.cs">
+      <DependentUpon>AddNewDessertControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\ChangeDessertTypeControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\ChangeDessertTypeControl.Designer.cs">
+      <DependentUpon>ChangeDessertTypeControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\ChangeIngredientsControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\ChangeIngredientsControl.Designer.cs">
+      <DependentUpon>ChangeIngredientsControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\ChangeIngredientsInNewDessertControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\ChangeIngredientsInNewDessertControl.Designer.cs">
+      <DependentUpon>ChangeIngredientsInNewDessertControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\ChangePasswordControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\ChangePasswordControl.Designer.cs">
+      <DependentUpon>ChangePasswordControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\ChangePhotoControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\ChangePhotoControl.Designer.cs">
+      <DependentUpon>ChangePhotoControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\DessertInOrderRowControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\DessertInOrderRowControl.Designer.cs">
+      <DependentUpon>DessertInOrderRowControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\DessertsControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\DessertsControl.Designer.cs">
+      <DependentUpon>DessertsControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\DessertsInOrderControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\DessertsInOrderControl.Designer.cs">
+      <DependentUpon>DessertsInOrderControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\AddUserControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\AddUserControl.Designer.cs">
+      <DependentUpon>AddUserControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\IngredientRowControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\IngredientRowControl.Designer.cs">
+      <DependentUpon>IngredientRowControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\IngredientsControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\IngredientsControl.Designer.cs">
+      <DependentUpon>IngredientsControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\InProgressOrdersRowControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\InProgressOrdersRowControl.Designer.cs">
+      <DependentUpon>InProgressOrdersRowControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\MainControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\MainControl.Designer.cs">
+      <DependentUpon>MainControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\NotVerifiedForEmplRowControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\NotVerifiedForEmplRowControl.Designer.cs">
+      <DependentUpon>NotVerifiedForEmplRowControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\NotVerifiedOrderRowControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\NotVerifiedOrderRowControl.Designer.cs">
+      <DependentUpon>NotVerifiedOrderRowControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\OrderRowControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\OrderRowControl.Designer.cs">
+      <DependentUpon>OrderRowControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\OrdersControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\OrdersControl.Designer.cs">
+      <DependentUpon>OrdersControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\OrdersForEmplControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\OrdersForEmplControl.Designer.cs">
+      <DependentUpon>OrdersForEmplControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\ReadyOrderForEmplRowControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\ReadyOrderForEmplRowControl.Designer.cs">
+      <DependentUpon>ReadyOrderForEmplRowControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\ReadyOrderRowControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\ReadyOrderRowControl.Designer.cs">
+      <DependentUpon>ReadyOrderRowControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\RequestRowControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\RequestRowControl.Designer.cs">
+      <DependentUpon>RequestRowControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\StatisticControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\StatisticControl.Designer.cs">
+      <DependentUpon>StatisticControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\TookOrderRowControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\TookOrderRowControl.Designer.cs">
+      <DependentUpon>TookOrderRowControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\UserAccountControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\UserAccountControl.Designer.cs">
+      <DependentUpon>UserAccountControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\UserRowControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\UserRowControl.Designer.cs">
+      <DependentUpon>UserRowControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\UsersControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\UsersControl.Designer.cs">
+      <DependentUpon>UsersControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DessertKomaDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DessertKomaDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Main.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Main.Designer.cs">
+      <DependentUpon>Main.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\NoVerificationUser.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\NoVerificationUser.Designer.cs">
+      <DependentUpon>NoVerificationUser.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\SignIn.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\SignIn.Designer.cs">
+      <DependentUpon>SignIn.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\SignUp.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\SignUp.Designer.cs">
+      <DependentUpon>SignUp.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Controls\AddIngredientControl.resx">
+      <DependentUpon>AddIngredientControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\AddIngredientInDessertControl.resx">
+      <DependentUpon>AddIngredientInDessertControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\AddIngredientInNewDessertControl.resx">
+      <DependentUpon>AddIngredientInNewDessertControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\AddNewDessertControl.resx">
+      <DependentUpon>AddNewDessertControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\ChangeDessertTypeControl.resx">
+      <DependentUpon>ChangeDessertTypeControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\ChangeIngredientsControl.resx">
+      <DependentUpon>ChangeIngredientsControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\ChangeIngredientsInNewDessertControl.resx">
+      <DependentUpon>ChangeIngredientsInNewDessertControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\ChangePasswordControl.resx">
+      <DependentUpon>ChangePasswordControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\ChangePhotoControl.resx">
+      <DependentUpon>ChangePhotoControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\DessertInOrderRowControl.resx">
+      <DependentUpon>DessertInOrderRowControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\DessertsControl.resx">
+      <DependentUpon>DessertsControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\DessertsInOrderControl.resx">
+      <DependentUpon>DessertsInOrderControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\AddUserControl.resx">
+      <DependentUpon>AddUserControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\IngredientRowControl.resx">
+      <DependentUpon>IngredientRowControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\IngredientsControl.resx">
+      <DependentUpon>IngredientsControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\InProgressOrdersRowControl.resx">
+      <DependentUpon>InProgressOrdersRowControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\MainControl.resx">
+      <DependentUpon>MainControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\NotVerifiedForEmplRowControl.resx">
+      <DependentUpon>NotVerifiedForEmplRowControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\NotVerifiedOrderRowControl.resx">
+      <DependentUpon>NotVerifiedOrderRowControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\OrderRowControl.resx">
+      <DependentUpon>OrderRowControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\OrdersControl.resx">
+      <DependentUpon>OrdersControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\OrdersForEmplControl.resx">
+      <DependentUpon>OrdersForEmplControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\ReadyOrderForEmplRowControl.resx">
+      <DependentUpon>ReadyOrderForEmplRowControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\ReadyOrderRowControl.resx">
+      <DependentUpon>ReadyOrderRowControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\RequestRowControl.resx">
+      <DependentUpon>RequestRowControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\StatisticControl.resx">
+      <DependentUpon>StatisticControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\TookOrderRowControl.resx">
+      <DependentUpon>TookOrderRowControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\UserAccountControl.resx">
+      <DependentUpon>UserAccountControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\UserRowControl.resx">
+      <DependentUpon>UserRowControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\UsersControl.resx">
+      <DependentUpon>UsersControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Main.resx">
+      <DependentUpon>Main.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\NoVerificationUser.resx">
+      <DependentUpon>NoVerificationUser.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\SignIn.resx">
+      <DependentUpon>SignIn.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\SignUp.resx">
+      <DependentUpon>SignUp.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <None Include="DessertKomaDataSet.xsc">
+      <DependentUpon>DessertKomaDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="DessertKomaDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DessertKomaDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="DessertKomaDataSet.xss">
+      <DependentUpon>DessertKomaDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
